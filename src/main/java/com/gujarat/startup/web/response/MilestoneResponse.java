@@ -3,7 +3,7 @@ package com.gujarat.startup.web.response;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.gujarat.startup.entity.User;
+import com.gujarat.startup.entity.Milestone;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -14,14 +14,14 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 @Builder
-public class UserResponse {
+public class MilestoneResponse {
 
-    private List<User> users;
+    private List<Milestone> milestones;
 
-    public void addUser(User user){
-        if(users == null){
-            users = new ArrayList<>();
+    public void addMilestone(Milestone milestone){
+        if(milestones == null){
+            milestones = new ArrayList<>();
         }
-        users.add(user);
+        milestones.add(milestone);
     }
 }

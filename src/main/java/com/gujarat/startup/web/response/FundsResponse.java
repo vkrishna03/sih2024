@@ -3,7 +3,7 @@ package com.gujarat.startup.web.response;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.gujarat.startup.entity.User;
+import com.gujarat.startup.entity.Funds;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -14,14 +14,14 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 @Builder
-public class UserResponse {
+public class FundsResponse {
 
-    private List<User> users;
+    private List<Funds> fundsList;
 
-    public void addUser(User user){
-        if(users == null){
-            users = new ArrayList<>();
+    public void addFunds(Funds funds){
+        if(fundsList == null){
+            fundsList = new ArrayList<>();
         }
-        users.add(user);
+        fundsList.add(funds);
     }
 }

@@ -3,7 +3,7 @@ package com.gujarat.startup.web.response;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.gujarat.startup.entity.User;
+import com.gujarat.startup.entity.IPR;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -14,14 +14,14 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 @Builder
-public class UserResponse {
+public class IPRResponse {
 
-    private List<User> users;
+    private List<IPR> iprs;
 
-    public void addUser(User user){
-        if(users == null){
-            users = new ArrayList<>();
+    public void addIPR(IPR ipr){
+        if(iprs == null){
+            iprs = new ArrayList<>();
         }
-        users.add(user);
+        iprs.add(ipr);
     }
 }
