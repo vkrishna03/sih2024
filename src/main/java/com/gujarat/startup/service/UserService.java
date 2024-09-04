@@ -1,8 +1,6 @@
 package com.gujarat.startup.service;
 
 
-import java.util.List;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,23 +34,6 @@ public class UserService {
 
     public UserResponse updateUser(UserRequest userRequest) {
         return null;
-    }
-
-    public UserResponse getUserByAccountId(Long accountId) {
-        if(accountId == null) {
-            logger.info("AccountId is null");
-            return null;
-        }
-        List<User> users = userRepository.findByAccountId(accountId);
-        if(users == null || users.isEmpty()) {
-            logger.info("Users arr not found for accountId: " + accountId);
-            return null;
-        }
-        UserResponse userResponse = UserResponse.builder().build();
-        for(User user : users) {
-            userResponse.addUser(user);
-        }
-        return userResponse;
     }
 
     public UserResponse getUserById(Long userId) {

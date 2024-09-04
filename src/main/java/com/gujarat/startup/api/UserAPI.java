@@ -45,16 +45,6 @@ public class UserAPI {
         return ResponseEntity.ok(userResponse);
     }
 
-    @GetMapping("/account/{accountId}")
-    public ResponseEntity<UserResponse> getUserByAccountId(Long accountId) {
-        UserResponse userResponse = userService.getUserByAccountId(accountId);
-        if(userResponse == null) {
-            logger.info("UserResponse is null");
-            return ResponseEntity.badRequest().build();
-        }
-        return ResponseEntity.ok(userResponse);
-    }
-
     @GetMapping("/userId/{userId}")
     public ResponseEntity<UserResponse> getUserByUserId(Long userId) {
         UserResponse userResponse = userService.getUserById(userId);
